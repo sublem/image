@@ -3,13 +3,17 @@ package org.example;
 import java.awt.image.BufferedImage;
 
 public class addBrighnessWorker implements Runnable{
-    BufferedImage img;
+
     private int percent;
     private int left;
     private int right;
+    BufferedImage img;
 
-
-    public addBrighnessWorker(int percent, int percent1, int left, BufferedImage img) {
+    public addBrighnessWorker(int percent, int left, int right, BufferedImage img) {
+        this.percent = percent;
+        this.left = left;
+        this.right = right;
+        this.img = img;
     }
 
     public void run() {

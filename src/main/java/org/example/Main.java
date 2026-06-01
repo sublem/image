@@ -10,12 +10,14 @@ public class Main {
 
         try {
             processor.read("img.png");
-            processor.increaseBrightness(-100);
+            processor.increaseBrightnessThreaded(50);
             processor.save("img_copy.png");
         } catch (IOException e) {
             System.out.println("Nie udalo sie odczytac pliku");
         }
+        catch (InterruptedException e) {
+            System.out.println("Nie udalo sie odczytac pliku2");
 
-
+        }
     }
     }
